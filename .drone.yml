@@ -12,5 +12,5 @@ steps:
     commands:
       - echo Build Success!
     when:
-      status: success
+        status: success
       
