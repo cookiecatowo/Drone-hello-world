@@ -3,7 +3,7 @@ type: docker
 name: hello-world
 steps:
   - name: success
-    iamge: plugins/git    
+    iamge: plugins/git
     commands:
       - echo Build Failure!
     when:
