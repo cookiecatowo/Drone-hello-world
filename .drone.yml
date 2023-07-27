@@ -7,13 +7,13 @@ steps:
     commands:
       - python hello-world.py
   - name: success
-    iamge: busybox
+    iamge: plugins/git    
     commands:
       - echo Build Success!
     when:
       status: success
   - name: failure
-    iamge: busybox
+    iamge: plugins/git    
     commands:
       - echo Build Failure!
     when:
