@@ -1,3 +1,4 @@
+---
 kind: pipeline
 type: docker
 name: hello-world
@@ -6,18 +7,17 @@ steps:
     image: python
     commands:
       - python hello-world.py
-      
   - name: success
     image: plugins/git
     commands:
       - echo Build Success!
     when:
-      status: [ success, failure ]
-      
- - name: failure
-    image: plugins/git    
+      status:
+        - success
+  - name: failure
+    image: plugins/git
     commands:
       - echo Build Failure!
     when:
-      status: 
+      status:
         - failure
