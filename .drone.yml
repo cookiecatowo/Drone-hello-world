@@ -6,3 +6,15 @@ steps:
     image: python
     commands:
       - python hello-world.py
+  - name: success
+    iamge: busybox
+    commands:
+      - echo Build Success!
+    when:
+      status: success
+  - name: failure
+    iamge: busybox
+    commands:
+      - echo Build Failure!
+    when:
+      status: failure
