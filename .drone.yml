@@ -7,7 +7,7 @@ steps:
     image: python
     commands:
       - python hello-world.py
-  - name: test
+  - name: success
     image: plugins/git
     commands:
       - echo Build Success!
