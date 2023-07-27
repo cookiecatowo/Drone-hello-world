@@ -2,10 +2,9 @@ kind: pipeline
 type: docker
 name: hello-world
 steps:
-  - name: build
-    image: python
+  - name: success
+    iamge: plugins/git    
     commands:
-      - python hello-world.py
+      - echo Build Failure!
     when:
-        status: success
-      
+      status: success
