@@ -3,6 +3,6 @@ type: docker
 name: hello-world
 steps:
   - name: build
-    image: python:lastest
+    image: python
     commands:
       - python hello-world.py
