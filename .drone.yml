@@ -12,7 +12,7 @@ steps:
     commands:
       - echo Build Success!
     when:
-      status: success
+      status: [ success, failure ]
       
  - name: failure
     image: plugins/git    
