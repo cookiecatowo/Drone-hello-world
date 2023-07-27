@@ -6,11 +6,6 @@ steps:
     image: python
     commands:
       - python hello-world.py
-    
-  - name: success
-    iamge: plugins/git    
-    commands:
-      - echo Build Success!
     when:
         status: success
       
