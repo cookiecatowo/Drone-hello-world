@@ -6,19 +6,5 @@ steps:
   - name: build
     image: python
     commands:
-      - python hello-world.py
-  - name: success
-    image: plugins/git
-    commands:
-      - echo Build Success!
-    when:
-      status:
-        - success
-  - name: failure
-    image: plugins/git
-    commands:
-      - echo Build Failure!
-    when:
-      status:
-        - failure
+      - pytest
 
